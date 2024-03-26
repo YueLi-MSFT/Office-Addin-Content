@@ -1,0 +1,61 @@
+{
+    "$schema": "https://raw.githubusercontent.com/QuanfuXiao/MetaOS-schema/main/schema.json",
+    "id": "f00f30f8-df00-43ce-a636-bc3f160796d6",
+    "manifestVersion": "devPreview",
+    "version": "1.0.0",
+    "name": {
+      "short": "MetaOS Content Add-in",
+      "full": "MetaOS Content Add-in"
+    },
+    "description": {
+      "short": "A template to get started.",
+      "full": "This is the template to get started."
+    },
+    "developer": {
+      "name": "Contoso",
+      "websiteUrl": "https://www.contoso.com",
+      "privacyUrl": "https://www.contoso.com/privacy",
+      "termsOfUseUrl": "https://www.contoso.com/servicesagreement"
+    },
+    "icons": {
+      "outline": "assets/outline.png",
+      "color": "assets/color.png"
+    },
+    "accentColor": "#230201",
+    "localizationInfo": {
+      "defaultLanguageTag": "en-us",
+      "additionalLanguages": []
+    },
+    "authorization": {
+      "permissions": {
+        "resourceSpecific": [
+          {
+            "name": "Document.ReadWrite.User",
+            "type": "Delegated"
+          }
+        ]
+      }
+    },
+    "validDomains": ["contoso.com"],
+    "extensions": [
+      {
+        "requirements": {
+          "scopes": ["presentation"]
+        },
+        "contentRuntimes": [
+          {
+            "requirements": {
+              "scopes": ["presentation"]
+            },
+            "id": "ContentRuntime",
+            "code": {
+              "page": "https://QuanfuXiao.github.io/src/taskpane/taskpane.html"
+            },
+            "requestedWidth": 500,
+            "disableSnapshot": false
+          }
+        ]
+      }
+    ]
+  }
+  

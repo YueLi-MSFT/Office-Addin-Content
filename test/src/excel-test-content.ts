@@ -1,5 +1,5 @@
 import { pingTestServer, sendTestResults } from "office-addin-test-helpers";
-import { run } from "../../src/content/excel";
+import { runExcel } from "../../src/content/excel";
 import * as testHelpers from "./test-helpers";
 
 /* global Excel, Office */
@@ -18,7 +18,7 @@ Office.onReady(async (info) => {
 
 export async function runTest(): Promise<void> {
   // Execute content code
-  await run();
+  await runExcel();
   await testHelpers.sleep(2000);
 
   // Get output of executed add-in code

@@ -1,5 +1,5 @@
 import { pingTestServer, sendTestResults } from "office-addin-test-helpers";
-import { run } from "../../src/content/powerpoint";
+import { runPowerPoint } from "../../src/content/powerpoint";
 import * as testHelpers from "./test-helpers";
 
 /* global Office */
@@ -30,7 +30,7 @@ async function getSelectedText(): Promise<string> {
 
 export async function runTest(): Promise<void> {
   // Execute code
-  await run();
+  await runPowerPoint();
 
   // get selected text
   const selectedText = await getSelectedText();

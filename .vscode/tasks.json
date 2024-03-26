@@ -1,6 +1,4 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
@@ -30,42 +28,35 @@
     },
     {
       "label": "Debug: Excel Desktop",
-      "type": "npm",
-      "script": "start:desktop -- --app excel",
+      "type": "shell",
+      "command": "npm",
+      "args": [
+        "run",
+        "start:desktop",
+        "--",
+        "--app",
+        "excel"
+      ],
       "presentation": {
         "clear": true,
-        "panel": "dedicated",
+        "panel": "dedicated"
       },
       "problemMatcher": []
     },
     {
       "label": "Debug: PowerPoint Desktop",
-      "type": "npm",
-      "script": "start:desktop -- --app powerpoint",
+      "type": "shell",
+      "command": "npm",
+      "args": [
+        "run",
+        "start:desktop",
+        "--",
+        "--app",
+        "powerpoint"
+      ],
       "presentation": {
         "clear": true,
-        "panel": "dedicated",
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Debug: Word Desktop",
-      "type": "npm",
-      "script": "start:desktop -- --app word",
-      "presentation": {
-        "clear": true,
-        "panel": "dedicated",
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Debug: Web",
-      "type": "npm",
-      "script": "start:web -- --document ${input:officeOnlineDocumentUrl}",
-      "presentation": {
-        "clear": true,
-        "panel": "shared",
-        "showReuseMessage": false
+        "panel": "dedicated"
       },
       "problemMatcher": []
     },
@@ -126,13 +117,6 @@
         "panel": "dedicated"
       },
       "problemMatcher": []
-    },
-  ],
-  "inputs": [
-    {
-      "id": "officeOnlineDocumentUrl",
-      "type": "promptString",
-      "description": "Please enter the url for the Office Online document."
     }
   ]
 }
