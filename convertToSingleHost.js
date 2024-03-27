@@ -43,15 +43,15 @@ async function convertProjectToSingleHost(host) {
     await writeFileAsync(`./manifest.${manifestType}`, manifestContent);
   }
 
-  // Copy over host-specific taskpane code to taskpane.ts
-  const contentFilePath = "./src/content/content.ts";
+  // Copy over host-specific taskpane code to taskpane.js
+  const contentFilePath = "./src/content/content.js";
   let contentCode = await readFileAsync(contentFilePath, "utf8");
   let targetHosts = host === "xp" ? ["excel", "powerpoint"] : [host];
 
   for (const host of hosts) {
     if (!targetHosts.includes(host)) {
-      if (fs.existsSync(`./src/content/${host}.ts`)) {
-        await unlinkFileAsync(`./src/content/${host}.ts`);
+      if (fs.existsSync(`./src/content/${host}.js`)) {
+        await unlinkFileAsync(`./src/content/${host}.js`);
       }
       // remove unneeded imports
       contentCode = contentCode.replace(`import "./${host}";`, "").replace(/^\s*[\r\n]/gm, "");
