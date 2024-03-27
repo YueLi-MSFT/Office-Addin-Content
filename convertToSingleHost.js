@@ -165,6 +165,7 @@ async function deleteSupportFiles() {
   await unlinkFileAsync("README.md");
   await unlinkFileAsync("SECURITY.md");
   await unlinkFileAsync("CODE_OF_CONDUCT.md");
+  await unlinkFileAsync("SUPPORT.md");
   await unlinkFileAsync(".npmrc");
   await unlinkFileAsync("package-lock.json");
   await unlinkFileAsync("./convertToSingleHost.js");
