@@ -18,7 +18,7 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
-      content: "./src/content/content.ts",
+      content: "./src/content/content.js",
     },
     output: {
       clean: true,
