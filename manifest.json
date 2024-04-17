@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/QuanfuXiao/MetaOS-schema/main/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "id": "f00f30f8-df00-43ce-a636-bc3f160796d6",
   "manifestVersion": "devPreview",
   "version": "1.0.0",
