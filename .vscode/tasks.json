@@ -32,7 +32,7 @@
       "command": "npm",
       "args": [
         "run",
-        "start:desktop",
+        "start",
         "--",
         "--app",
         "excel"
@@ -49,7 +49,7 @@
       "command": "npm",
       "args": [
         "run",
-        "start:desktop",
+        "start",
         "--",
         "--app",
         "powerpoint"
