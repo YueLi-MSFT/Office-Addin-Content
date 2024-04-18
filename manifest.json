@@ -49,7 +49,7 @@
           },
           "id": "ContentRuntime",
           "code": {
-            "page": "https://QuanfuXiao.github.io/src/taskpane/taskpane.html"
+            "page": "https://localhost:3000/content.html"
           },
           "requestedWidth": 500,
           "disableSnapshot": false
